@@ -38,3 +38,8 @@ jobs:
         run: |
           export PYTHONPATH=$(pwd)
           pytest --maxfail=1 --disable-warnings -q
+      # Vérifier la sécurité des dépendances (optionnel)
+      - name: Check for security issues
+        run: 
+          pip install safety
+          safety check -r app/requirements.txt  || true    
