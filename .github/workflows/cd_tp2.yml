@@ -1,4 +1,4 @@
-name: CD–FastAPI
+name: CD–FastAPI-TP2
 
 on:
   workflow_run:
